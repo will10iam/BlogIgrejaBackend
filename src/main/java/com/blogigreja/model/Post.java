@@ -7,14 +7,14 @@ public class Post {
 	private String titulo;
 	private String conteudo;
 	private String autor;
-	private Date dataCriacao;
+	private String dataCriacao;
 	
-	public Post(int id, String titulo, String conteudo, String autor, Date dataCriacao) {
+	public Post(int id, String titulo, String conteudo, String autor, String string) {
 		this.id = id;
 		this.titulo = titulo;
 		this.conteudo = conteudo;
 		this.autor = autor;
-		this.dataCriacao = dataCriacao;
+		this.dataCriacao = string;
 	}
 
 	
@@ -51,12 +51,18 @@ public class Post {
 		this.autor = autor;
 	}
 
-	public Date getDataCriacao() {
+	public String getDataCriacao() {
 		return dataCriacao;
 	}
 
-	public void setDataCriacao(Date dataCriacao) {
+	public void setDataCriacao(String dataCriacao) {
 		this.dataCriacao = dataCriacao;
+	}
+	
+	@Override
+	public String toString() {
+		  return "{\"id\": " + id + ", \"titulo\": \"" + titulo + "\", \"conteudo\": \"" + conteudo + "\", \"dataCriacao\": \"" + dataCriacao + "\", \"autor\": \"" + autor + "\"}";
+		    
 	}
 
 	
